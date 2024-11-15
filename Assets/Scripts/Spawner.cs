@@ -31,12 +31,13 @@ public class Spawner : MonoBehaviour
     private void Spawn()
     {
         float spawnChance = Random.value;
-        transform.position = new Vector3(cam.ScreenToWorldPoint(new Vector3(Screen.width + 150, 0, 0)).x, 0, 0);
+        //transform.position = new Vector3(cam.ScreenToWorldPoint(new Vector3(Screen.width + 150, 0, 0)).x, 0, 0);
 
         foreach (var obj in objects)
         {
             if (spawnChance < obj.spawnChance)
             {
+                transform.position = new Vector3(cam.ScreenToWorldPoint(new Vector3(Screen.width + 150, 0, 0)).x, obj.prefab.transform.position.y, 0);
                 GameObject obstacle = Instantiate(obj.prefab);
                 obstacle.transform.position = transform.position;
                 break;

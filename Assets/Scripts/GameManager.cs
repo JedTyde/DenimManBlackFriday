@@ -94,27 +94,27 @@ public class GameManager : MonoBehaviour
         }
         if (score > 500 && score <= 1000)
         {
-            promoCode.text = "BuenDia0222_5K";
+            promoCode.text = "Promo code:\nBuenDia0222_5K";
         }
         if (score > 1000 && score <= 1500)
         {
-            promoCode.text = "Game0222_10X";
+            promoCode.text = "Promo code:\nGame0222_10X";
         }
         if (score > 1500 && score <= 2000)
         {
-            promoCode.text = "BD_Game15Plus";
+            promoCode.text = "Promo code:\nBD_Game15Plus";
         }
         if (score > 2000 && score <= 2500)
         {
-            promoCode.text = "BuenDia20_XP";
+            promoCode.text = "Promo code:\nBuenDia20_XP";
         }
         if (score > 2500 && score <= 3000)
         {
-            promoCode.text = "GameBD25_Pro";
+            promoCode.text = "Promo code:\nGameBD25_Pro";
         }
         if (score > 3000)
         {
-            promoCode.text = "BD0222_30Max";
+            promoCode.text = "Promo code:\nBD0222_30Max";
         }
 
         UpdateHiscore();

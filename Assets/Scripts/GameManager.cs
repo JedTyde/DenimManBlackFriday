@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiscoreText;
+    public TextMeshProUGUI promoCode;
     public Button retryButton;
     public Button menu;
 
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
         player.gameObject.SetActive(true);
         spawner.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(false);
+        promoCode.gameObject.SetActive(false);
         retryButton.gameObject.SetActive(false);
         menu.gameObject.SetActive(false);
 
@@ -82,8 +84,38 @@ public class GameManager : MonoBehaviour
         player.gameObject.SetActive(false);
         spawner.gameObject.SetActive(false);
         gameOverText.gameObject.SetActive(true);
+        promoCode.gameObject.SetActive(true);
         retryButton.gameObject.SetActive(true);
         menu.gameObject.SetActive(true);
+
+        if (score <= 500)
+        {
+            promoCode.text = "Sigue intentandolo para obtener más recompensas!";
+        }
+        if (score > 500 && score <= 1000)
+        {
+            promoCode.text = "BuenDia0222_5K";
+        }
+        if (score > 1000 && score <= 1500)
+        {
+            promoCode.text = "Game0222_10X";
+        }
+        if (score > 1500 && score <= 2000)
+        {
+            promoCode.text = "BD_Game15Plus";
+        }
+        if (score > 2000 && score <= 2500)
+        {
+            promoCode.text = "BuenDia20_XP";
+        }
+        if (score > 2500 && score <= 3000)
+        {
+            promoCode.text = "GameBD25_Pro";
+        }
+        if (score > 3000)
+        {
+            promoCode.text = "BD0222_30Max";
+        }
 
         UpdateHiscore();
     }
@@ -98,34 +130,37 @@ public class GameManager : MonoBehaviour
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
         score += gameSpeed * Time.deltaTime; //Si se quiere reducir no poner gamespeed
         //scoreText.text = Mathf.FloorToInt(score).ToString("D5");
-        if (score < 500)
-        {
-            scoreText.text = "0%";
-        }
-        if (score > 499 && score < 1000)
-        {
-            scoreText.text = "5%";
-        }
-        if (score > 999 && score < 1500)
-        {
-            scoreText.text = "10%";
-        }
-        if (score > 1499 && score < 2000)
-        {
-            scoreText.text = "15%";
-        }
-        if (score > 1999 && score < 2500)
-        {
-            scoreText.text = "20%";
-        }
-        if (score > 2499 && score < 3000)
-        {
-            scoreText.text = "25%";
-        }
-        if (score > 2999)
-        {
-            scoreText.text = "30%";
-        }
+        //if (score < 500)
+        //{
+        //    scoreText.text = "0%";
+        //}
+        //if (score > 499 && score < 1000)
+        //{
+        //    scoreText.text = "5%";
+        //}
+        //if (score > 999 && score < 1500)
+        //{
+        //    scoreText.text = "10%";
+        //}
+        //if (score > 1499 && score < 2000)
+        //{
+        //    scoreText.text = "15%";
+        //}
+        //if (score > 1999 && score < 2500)
+        //{
+        //    scoreText.text = "20%";
+        //}
+        //if (score > 2499 && score < 3000)
+        //{
+        //    scoreText.text = "25%";
+        //}
+        //if (score > 2999)
+        //{
+        //    scoreText.text = "30%";
+        //}
+        
+
+        scoreText.text = Mathf.FloorToInt(score/100).ToString();
     }
 
     private void UpdateHiscore()

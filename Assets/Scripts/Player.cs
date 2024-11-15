@@ -10,10 +10,15 @@ public class Player : MonoBehaviour
 
     public Camera cam;
 
+    Animator m_Animator;
+
+
     private void Awake()
     {
         character = GetComponent<CharacterController>();
         cam = Camera.main;
+
+        m_Animator = gameObject.GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -28,11 +33,17 @@ public class Player : MonoBehaviour
 
         if (character.isGrounded) 
         {
+            m_Animator.ResetTrigger("jump");
+            m_Animator.SetTrigger("run");
+
             direction = Vector3.down;
 
             if (Input.GetButton("Jump")) 
             {
-                direction = Vector3.up * jumpForce;
+                m_Animator.ResetTrigger("run");
+                m_Animator.SetTrigger("jump");
+                
+                direction = Vector3.up * jumpForce;              
             }
         }
 

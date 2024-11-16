@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public float gravity = 9.81f * 2f;
     public float jumpForce = 8f;
 
+    private AudioSource jumpSound;
+
     public Camera cam;
 
     Animator m_Animator;
@@ -18,6 +20,7 @@ public class Player : MonoBehaviour
         character = GetComponent<CharacterController>();
         cam = Camera.main;
 
+        jumpSound = GetComponent<AudioSource>();
         m_Animator = gameObject.GetComponent<Animator>();
     }
 
@@ -42,6 +45,8 @@ public class Player : MonoBehaviour
             {
                 m_Animator.ResetTrigger("run");
                 m_Animator.SetTrigger("jump");
+
+                jumpSound.Play();
                 
                 direction = Vector3.up * jumpForce;              
             }

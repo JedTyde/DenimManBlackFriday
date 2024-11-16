@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiscoreText;
     public TextMeshProUGUI promoCode;
+    public AudioSource points;
     public Button retryButton;
     public Button menu;
 
@@ -90,7 +91,7 @@ public class GameManager : MonoBehaviour
 
         if (score <= 500)
         {
-            promoCode.text = "Sigue intentandolo para obtener más recompensas!";
+            promoCode.text = "Keep trying to get more rewards!";
         }
         if (score > 500 && score <= 1000)
         {
@@ -159,8 +160,16 @@ public class GameManager : MonoBehaviour
         //    scoreText.text = "30%";
         //}
         
-
-        scoreText.text = Mathf.FloorToInt(score/100).ToString();
+        if (score % 100 <= 0.1f && score %100 >= 99.9f)
+        {
+            points.Play();
+        }
+        
+        //else
+        //{
+        //    points.Play();
+        //}
+        scoreText.text = Mathf.FloorToInt(score).ToString();
     }
 
     private void UpdateHiscore()

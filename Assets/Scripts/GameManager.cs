@@ -160,8 +160,11 @@ public class GameManager : MonoBehaviour
         //    scoreText.text = "30%";
         //}
         
-        if (score % 100 <= 0.1f && score %100 >= 99.9f)
+       
+
+        if (((int)score % 100 == 0) && (score >= 100))
         {
+            Debug.Log((int)score);
             points.Play();
         }
         
@@ -174,7 +177,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateHiscore()
     {
-        float hiscore = PlayerPrefs.GetFloat("hiscore", 0);
+         float hiscore = PlayerPrefs.GetFloat("hiscore", 0);
 
         if (score > hiscore)
         {

@@ -22,7 +22,11 @@ public class Background : MonoBehaviour
         //}
         for (var i = 0; i < meshRenderer1.Length; i++)
         {
-            speed --;
+            if(GameManager.Instance.gameSpeed != 0) 
+            {
+                speed--;
+            }
+            
             meshRenderer1[i].material.mainTextureOffset += (Vector2.right * speed * Time.deltaTime)/ variable;
             
             Debug.Log(speed);

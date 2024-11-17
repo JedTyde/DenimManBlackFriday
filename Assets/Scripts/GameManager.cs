@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public AudioSource gameOverA;
     public Button retryButton;
     public Button menu;
+    public Image img;
 
     private Player player;
     private Spawner spawner;
@@ -74,6 +75,7 @@ public class GameManager : MonoBehaviour
         promoCode.gameObject.SetActive(false);
         retryButton.gameObject.SetActive(false);
         menu.gameObject.SetActive(false);
+        img.gameObject.SetActive(false);
 
         UpdateHiscore();
     }
@@ -89,6 +91,7 @@ public class GameManager : MonoBehaviour
         promoCode.gameObject.SetActive(true);
         retryButton.gameObject.SetActive(true);
         menu.gameObject.SetActive(true);
+        img.gameObject.SetActive(true);
 
         if (score <= 500)
         {

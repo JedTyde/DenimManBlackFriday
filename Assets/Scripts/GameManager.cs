@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI hiscoreText;
     public TextMeshProUGUI promoCode;
     public AudioSource points;
+    public AudioSource gameOverA;
     public Button retryButton;
     public Button menu;
 
@@ -117,7 +118,7 @@ public class GameManager : MonoBehaviour
         {
             promoCode.text = "Promo code:\nBD0222_30Max";
         }
-
+        gameOverA.Play();
         UpdateHiscore();
     }
 

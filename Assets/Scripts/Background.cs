@@ -27,9 +27,8 @@ public class Background : MonoBehaviour
                 speed--;
             }
             
-            meshRenderer1[i].material.mainTextureOffset += (Vector2.right * speed * Time.deltaTime)/ variable;
+            meshRenderer1[i].material.mainTextureOffset += (Vector2.right * speed * Time.deltaTime)/ variable;            
             
-            Debug.Log(speed);
         }
         //meshRenderer.material.mainTextureOffset += Vector2.right * speed * Time.deltaTime;
     }

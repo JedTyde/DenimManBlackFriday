@@ -159,19 +159,12 @@ public class GameManager : MonoBehaviour
         //{
         //    scoreText.text = "30%";
         //}
-        
-       
 
         if (((int)score % 100 == 0) && (score >= 100))
         {
-            Debug.Log((int)score);
+            //Debug.Log((int)score);
             points.Play();
         }
-        
-        //else
-        //{
-        //    points.Play();
-        //}
         scoreText.text = Mathf.FloorToInt(score).ToString();
     }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 838992201792243222}
   - component: {fileID: -1571634300789456009}
   m_Layer: 0
-  m_Name: Cactus_Large_Triple
+  m_Name: Cactus_Large_Triple3
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

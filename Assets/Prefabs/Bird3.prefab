@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8506838465965847357}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7554885377733317124
 SpriteRenderer:
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 8b22a8daa6856284890ae7cc68387bb9, type: 3}
-  - {fileID: 21300000, guid: 5b67abc9207c96249ac0de7dea3b1bb0, type: 3}
+  - {fileID: 21300000, guid: 84407f4ed1864de4696a1ddcc8f9f8b5, type: 3}
+  - {fileID: 21300000, guid: 9031d9243999a7b4ab2b35fc0a972c2b, type: 3}
 --- !u!114 &6535986170626286673
 MonoBehaviour:
   m_ObjectHideFlags: 0

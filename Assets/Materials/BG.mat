@@ -84,7 +84,7 @@ Material:
     - _Parallax: 0.02
     - _RippleSpeed: 3.1
     - _RippleStrength: 0.53
-    - _RipplesCount: 8.9
+    - _RipplesCount: 3.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

@@ -13,8 +13,8 @@ public class MainMenu : MonoBehaviour
     public Button button3;
     public Image day;
     public Image night;
-    public TextMeshProUGUI titleDay;
-    public TextMeshProUGUI titlenight;
+    public Image titleDay;
+    public Image titlenight;
     public TextMeshProUGUI subTitleDay;
     public TextMeshProUGUI subTitleNight;
     //private DateTime time;

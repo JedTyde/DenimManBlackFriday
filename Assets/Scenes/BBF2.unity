@@ -2487,8 +2487,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PROMO CODE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a3148eba687ae664386596eb3bff330e, type: 2}
-  m_sharedMaterial: {fileID: -7726646406562007205, guid: a3148eba687ae664386596eb3bff330e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e4632702217a54d40850dfca92953035, type: 2}
+  m_sharedMaterial: {fileID: -1883751462635504616, guid: e4632702217a54d40850dfca92953035, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

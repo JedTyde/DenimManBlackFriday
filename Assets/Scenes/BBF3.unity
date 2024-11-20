@@ -2625,7 +2625,7 @@ MonoBehaviour:
   - {fileID: 1722055489}
   - {fileID: 14051719}
   - {fileID: 1085292523}
-  variable: 30
+  variable: 45
 --- !u!4 &1867929376
 Transform:
   m_ObjectHideFlags: 0

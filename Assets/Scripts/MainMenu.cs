@@ -15,8 +15,8 @@ public class MainMenu : MonoBehaviour
     public Image night;
     public Image titleDay;
     public Image titlenight;
-    public TextMeshProUGUI subTitleDay;
-    public TextMeshProUGUI subTitleNight;
+    public Image subTitleDay;
+    public Image subTitleNight;
     //private DateTime time;
 
     void Update()

@@ -133,7 +133,15 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
-        score += gameSpeed * Time.deltaTime; //Si se quiere reducir no poner gamespeed
+        if (score < 1000)
+        {
+            score += gameSpeed * 2 * Time.deltaTime;
+        }
+        else
+        {
+            score += gameSpeed * Time.deltaTime;
+        }
+         //Si se quiere reducir no poner gamespeed
         //scoreText.text = Mathf.FloorToInt(score).ToString("D5");
         //if (score < 500)
         //{

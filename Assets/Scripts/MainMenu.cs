@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public Button button1;
     public Button button2;
     public Button button3;
+    public Button button4;
     public Image day;
     public Image night;
     public Image titleDay;
@@ -64,5 +65,9 @@ public class MainMenu : MonoBehaviour
     public void level3()
     {
         SceneManager.LoadScene(3);
+    }
+    public void level4()
+    {
+        SceneManager.LoadScene(4);
     }
 }

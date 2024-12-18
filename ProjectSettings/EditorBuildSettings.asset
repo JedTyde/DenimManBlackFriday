@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BBF3.unity
     guid: 72479920570994349add72b45881aac8
+  - enabled: 1
+    path: Assets/Scenes/BBF4.unity
+    guid: a83618a41bee1c149a08cacc4492cdc8
   m_configObjects: {}

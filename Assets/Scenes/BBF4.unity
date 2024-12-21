@@ -868,7 +868,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f0a94bae72e7b9041bdc2a8f63d42d73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3aa01af22b1a084c99b948286f6f922, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -934,7 +934,7 @@ Animator:
   m_GameObject: {fileID: 528559896}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ac33f406efc35409c838c2230f9bfd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1883fe15bd54c3146b3adbfdf6595834, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1156,18 +1156,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - prefab: {fileID: 331946717782035337, guid: f914e2af27d6ff4418a2daad46d4dd82, type: 3}
-    spawnChance: 0.25
-  - prefab: {fileID: 6539373263022831315, guid: 735b5bca81153c949a1139433edabb7b, type: 3}
     spawnChance: 0.2
-  - prefab: {fileID: 9209861935170019660, guid: 8556a06f45cc8a54ebf53b0c2c410d56, type: 3}
+  - prefab: {fileID: 6539373263022831315, guid: 735b5bca81153c949a1139433edabb7b, type: 3}
     spawnChance: 0.15
-  - prefab: {fileID: 2348658137220901074, guid: 1fd787bc2d9c0f546946319535b4f346, type: 3}
+  - prefab: {fileID: 9209861935170019660, guid: 8556a06f45cc8a54ebf53b0c2c410d56, type: 3}
     spawnChance: 0.15
   - prefab: {fileID: 7711683282748364219, guid: 1b89323e7ace0ca408735aedfb579b04, type: 3}
     spawnChance: 0.15
+  - prefab: {fileID: 2348658137220901074, guid: 1fd787bc2d9c0f546946319535b4f346, type: 3}
+    spawnChance: 0.1
   - prefab: {fileID: 6715707889397745844, guid: 156a5d45e91ce5243b3c3cadecd4b365, type: 3}
     spawnChance: 0.15
-  - prefab: {fileID: 8506838465965847357, guid: 7f3ac4d2570b80944843f8ed26b8de90, type: 3}
+  - prefab: {fileID: 8506838465965847357, guid: e91cec0a9fa4ad44e99de00c1ef717f6, type: 3}
     spawnChance: 0.1
   minSpawnRate: 1
   maxSpawnRate: 2

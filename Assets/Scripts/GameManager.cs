@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiscoreText;
     public TextMeshProUGUI promoCode;
+    public TextMeshProUGUI discountPercent;
     public AudioSource points;
     public AudioSource gameOverA;
     public Button retryButton;
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
-
+        discountPercent.text = "0%";
         NewGame();
     }
 
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
 
         gameSpeed = initialGameSpeed;
         enabled = true;
+        discountPercent.text = "0%";
 
         player.gameObject.SetActive(true);
         spawner.gameObject.SetActive(true);
@@ -93,23 +95,23 @@ public class GameManager : MonoBehaviour
         menu.gameObject.SetActive(true);
         img.gameObject.SetActive(true);
 
-        if (score <= 1000)
+        if (score <= 500)
         {
             promoCode.text = "Keep trying to get more rewards!";
         }
-        else if(score > 1000 && score <= 1500)
+        else if(score > 500 && score <= 1000)
         {
             promoCode.text = "Promo code:\nXMASBUENDIA0222_5";
         }
-        else if (score > 1500 && score <= 2000)
+        else if (score > 1000 && score <= 3000)
         {
             promoCode.text = "Promo code:\nXMASGAME0222_10";
         }
-        else if(score > 2000 && score <= 2500)
+        else if(score > 3000 && score <= 6000)
         {
             promoCode.text = "Promo code:\nXMASBD_GAME15";
         }
-        else if(score > 2500)
+        else if(score > 6000)
         {
             promoCode.text = "Promo code:\nXMASBUENDIA20";
         }
@@ -121,6 +123,7 @@ public class GameManager : MonoBehaviour
         {
             promoCode.text = "Promo code:\nBD0222_30Max";
         }*/
+
         gameOverA.Play();
         UpdateHiscore();
     }
@@ -178,6 +181,27 @@ public class GameManager : MonoBehaviour
             points.Play();
         }
         scoreText.text = Mathf.FloorToInt(score).ToString();
+
+        if (score <= 500)
+        {
+            discountPercent.text = "0%";
+        }
+        else if (score > 500 && score <= 1000)
+        {
+            discountPercent.text = "5%";
+        }
+        else if (score > 1000 && score <= 3000)
+        {
+            discountPercent.text = "10%";
+        }
+        else if (score > 3000 && score <= 6000)
+        {
+            discountPercent.text = "15%";
+        }
+        else if (score > 6000)
+        {
+            discountPercent.text = "20%";
+        }
     }
 
     private void UpdateHiscore()

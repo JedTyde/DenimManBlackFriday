@@ -93,34 +93,34 @@ public class GameManager : MonoBehaviour
         menu.gameObject.SetActive(true);
         img.gameObject.SetActive(true);
 
-        if (score <= 500)
+        if (score <= 1000)
         {
             promoCode.text = "Keep trying to get more rewards!";
         }
-        if (score > 500 && score <= 1000)
+        else if(score > 1000 && score <= 1500)
         {
-            promoCode.text = "Promo code:\nBuenDia0222_5K";
+            promoCode.text = "Promo code:\nXMASBUENDIA0222_5";
         }
-        if (score > 1000 && score <= 1500)
+        else if (score > 1500 && score <= 2000)
         {
-            promoCode.text = "Promo code:\nGame0222_10X";
+            promoCode.text = "Promo code:\nXMASGAME0222_10";
         }
-        if (score > 1500 && score <= 2000)
+        else if(score > 2000 && score <= 2500)
         {
-            promoCode.text = "Promo code:\nBD_Game15Plus";
+            promoCode.text = "Promo code:\nXMASBD_GAME15";
         }
-        if (score > 2000 && score <= 2500)
+        else if(score > 2500)
         {
-            promoCode.text = "Promo code:\nBuenDia20_XP";
+            promoCode.text = "Promo code:\nXMASBUENDIA20";
         }
-        if (score > 2500 && score <= 3000)
+        /*if (score > 2500 && score <= 3000)
         {
             promoCode.text = "Promo code:\nGameBD25_Pro";
         }
         if (score > 3000)
         {
             promoCode.text = "Promo code:\nBD0222_30Max";
-        }
+        }*/
         gameOverA.Play();
         UpdateHiscore();
     }
